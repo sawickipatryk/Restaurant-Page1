@@ -274,3 +274,67 @@ header {
     color: var(--description-text-color);
     line-height: 170%;
 }
+
+.slider__text-container {
+    text-align: center;
+}
+
+.slider__carousel-container {
+    position: relative;
+}
+
+.carousel__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+.carousel__header {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.carousel__img-container {
+    width: 270px;
+    margin-bottom: 15px;
+}
+
+.carousel__price {
+    font-size: 28px;
+    font-weight: 600;
+    color: #FAC213;
+}
+
+.people-say__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px var(--shadow-border-arrow-color);
+}
+
+.people-say__arrow:first-child {
+    left: -6px;
+}
+
+.people-say__arrow:last-child {
+    right: -6px;
+}
+
+.slider__carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow: hidden;
+    gap: 10px;
+}
