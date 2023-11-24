@@ -215,6 +215,7 @@ header {
 
 .slider__container {
     position: relative;
+    overflow: hidden;
 }
 
 .slider__img {
