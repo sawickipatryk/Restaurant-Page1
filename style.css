@@ -338,3 +338,52 @@ header {
     overflow: hidden;
     gap: 10px;
 }
+
+.menu {
+    background-image: url(./assets//img/backgroundMenu.jpg);
+    color: var(--first-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu__pizza-menu,
+.menu__drinks-menu {
+    border: 2px solid #FAC213;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.menu__header {
+    color: #FAC213;
+}
+
+.menu__pizza-container,
+.menu__drinks-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.menu__pizza-top-contaier,
+.menu__drinks-top-contaier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu__pizza-price,
+.menu__drinks-price {
+    font-size: 20px;
+    font-weight: var(--font-bold);
+}
+
+.menu__description {
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.9);
+}
