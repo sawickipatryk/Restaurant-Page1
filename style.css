@@ -360,6 +360,10 @@ header {
     color: #FAC213;
 }
 
+.menu__text-container .menu__sub-header:first-child {
+    text-align: center;
+}
+
 .menu__pizza-container,
 .menu__drinks-container {
     display: flex;
@@ -386,4 +390,50 @@ header {
 .menu__description {
     padding: 5px;
     color: rgba(255, 255, 255, 0.9);
+}
+
+.delivery {
+    background-color: var(--second-color);
+    text-align: center;
+}
+
+.delivery__text-container {
+    margin-bottom: 60px;
+}
+
+.footer__cointainer {
+    text-align: center;
+
+}
+
+.footer__quick-links a,
+.footer__social-container a {
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    font-weight: var(--font-semi-bold);
+    font-size: 16px;
+    text-transform: uppercase;
+
+}
+
+.footer__social-container a {
+    margin-right: 15px;
+}
+
+.footer__social-header,
+.footer__contact-header,
+.footer__quick-links-header {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer__contact-container p {
+    margin-bottom: 10px
 }
