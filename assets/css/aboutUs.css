@@ -208,6 +208,13 @@ header {
     color: var(--third-color);
 }
 
+.about__container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
 .about__img {
     max-width: 400px;
     margin-bottom: 20px;
