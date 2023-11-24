@@ -283,7 +283,37 @@ header {
     position: relative;
 }
 
+.slider__carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+.slider__carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.slider__carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.slider__carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.slider__carousel.dragging .carousel__card {
+    cursor: grab;
+    user-select: none;
+}
+
 .carousel__card {
+    scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,7 +341,7 @@ header {
     color: #FAC213;
 }
 
-.people-say__arrow {
+.slider__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -323,21 +353,15 @@ header {
     box-shadow: 0 3px 6px var(--shadow-border-arrow-color);
 }
 
-.people-say__arrow:first-child {
+.slider__arrow:first-child {
     left: -6px;
 }
 
-.people-say__arrow:last-child {
+.slider__arrow:last-child {
     right: -6px;
 }
 
-.slider__carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-    overflow: hidden;
-    gap: 10px;
-}
+
 
 .menu {
     background-image: url(./assets//img/backgroundMenu.jpg);
