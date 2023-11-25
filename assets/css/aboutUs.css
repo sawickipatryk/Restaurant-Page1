@@ -428,7 +428,7 @@ header {
         width: 900px;
         flex-direction: row;
         box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.8);
-        margin: 20px auto;
+        margin: 60px auto;
         align-items: normal;
         background-color: #fff;
     }
