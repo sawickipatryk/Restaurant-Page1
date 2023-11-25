@@ -210,33 +210,54 @@ header {
     color: var(--third-color);
 }
 
-.carousel {
+.gallery__carousel-container {
     position: relative;
     max-width: 1280px;
     width: 100%;
 }
 
-.carousel__caunter {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    bottom: 4px;
-    left: 3px;
-}
-
-.carousel__cards {
+.carousel {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 100%;
-    overflow: hidden;
+    grid-auto-columns: 100%;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
-.carousel__card {
-    width: 350px;
-    margin: 0 auto;
+.carousel.no-transition {
+    scroll-behavior: auto;
 }
 
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.card__img {
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
 
 .carousel__arrow {
     position: absolute;
