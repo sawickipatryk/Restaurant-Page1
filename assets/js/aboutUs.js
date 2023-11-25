@@ -25,7 +25,7 @@ let cardPerView = Math.round(carousel.offsetWidth / firstCardWith)
 carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
     carousel.insertAdjacentHTML('afterbegin', card.outerHTML)
 })
-carouselChildrens.slice(0, -cardPerView).forEach(card => {
+carouselChildrens.slice(0, cardPerView).forEach(card => {
     carousel.insertAdjacentHTML('beforeend', card.outerHTML)
 })
 

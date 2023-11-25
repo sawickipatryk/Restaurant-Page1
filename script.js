@@ -64,7 +64,7 @@ const infiniteScroll = () => {
     }
 }
 
-carousel.addEventListener('mousedown', dragStart)
+carousel.addEventListener('mousedown', startDrag)
 carousel.addEventListener('mousemove', dragging)
-document.addEventListener('mouseup', dragStop)
+document.addEventListener('mouseup', stopDrag)
 carousel.addEventListener('scroll', infiniteScroll)

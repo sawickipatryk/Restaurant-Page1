@@ -149,6 +149,7 @@ header {
     height: 50vh;
     background-color: var(--navbar-mobile-background-color);
     padding: 10px 30px;
+
 }
 
 .nav__links.active {
@@ -181,6 +182,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
 }
 
 .nav__cart-container {
@@ -210,6 +212,85 @@ header {
     color: var(--third-color);
 }
 
+
+.wrapper {
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.counter {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+}
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    user-select: none;
+}
+
+.card__img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px var(--shadow-border-arrow-color);
+}
+
+.carousel__header {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.carousel__description {
+    padding: 0 30px;
+}
+
+.arrow:first-child {
+    left: -11px;
+}
+
+.arrow:last-child {
+    right: -11px;
+}
 
 .footer__cointainer {
     text-align: center;
@@ -246,4 +327,46 @@ header {
 
 .footer__contact-container p {
     margin-bottom: 10px
+}
+
+@media screen and (min-width:600px) {
+    .hero {
+        justify-content: center;
+    }
+
+    .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+@media screen and (min-width:900px) {
+    header {
+        height: 35vh;
+    }
+
+    .hero {
+        height: calc(35vh - 80px);
+    }
+
+    .header {
+        font-size: calc(var(--header-font-size) * 1.4);
+    }
+
+    .carousel {
+        grid-auto-columns: 100%;
+    }
+
+    .footer__cointainer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer__left-container {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+
+    }
 }

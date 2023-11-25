@@ -368,6 +368,10 @@ header {
     user-select: none;
 }
 
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
 .card {
     scroll-snap-align: start;
     display: flex;
