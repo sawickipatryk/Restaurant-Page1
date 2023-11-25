@@ -181,6 +181,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
 }
 
 .nav__cart-container {
@@ -381,6 +382,77 @@ header {
 }
 
 @media screen and (min-width:900px) {
+    :root {
+        --header-font-size: calc(30px * 1.4);
+    }
+
+    header {
+        height: 40vh;
+    }
+
+
+    .hero {
+        justify-content: center;
+        height: calc(40vh - 80px);
+    }
+
+    .container {
+        padding: 0px;
+    }
+
+    .about__container::after {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: -100px;
+        height: 100px;
+        width: 200px;
+        background-color: #FAC213;
+        z-index: -100;
+    }
+
+    .about__container::before {
+        position: absolute;
+        content: "";
+        top: 60%;
+        right: -100px;
+        height: 100px;
+        width: 200px;
+        background-color: #FAC213;
+        z-index: -100;
+    }
+
+
+    .about__container {
+        position: relative;
+        width: 900px;
+        flex-direction: row;
+        box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.8);
+        margin: 20px auto;
+        align-items: normal;
+        background-color: #fff;
+    }
+
+
+    .about__text-container {
+        background-color: #fff;
+    }
+
+    .about__img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0px;
+    }
+
+    .about__text-container {
+        width: 50%;
+        align-self: center;
+    }
+
+    .about__img-container {
+        width: 50%;
+    }
+
     .carousel {
         grid-auto-columns: calc((100% / 3) - 12px);
     }
@@ -389,6 +461,23 @@ header {
         top: -70px;
         left: 0;
         transform: rotate(137deg) scale(0.5);
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .footer__cointainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer__left-container,
+    .footer__right-container {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
     }
 }
 
