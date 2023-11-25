@@ -210,103 +210,35 @@ header {
     color: var(--third-color);
 }
 
-.about__container {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-}
-
-.about__img {
-    max-width: 400px;
-    margin-bottom: 20px;
-}
-
-.slider__container {
+.carousel {
     position: relative;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.carousel__caunter {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    bottom: 4px;
+    left: 3px;
+}
+
+.carousel__cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 100%;
     overflow: hidden;
 }
 
-.slider__img {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    filter: opacity(45%);
-    transform: rotate(45deg);
-}
-
-.slider__text-container {
-    text-align: center;
-}
-
-.slider__carousel-container {
-    position: relative;
-}
-
-.slider__carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    gap: 10px;
-    scroll-behavior: smooth;
-}
-
-.slider__carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.slider__carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.slider__carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.slider__carousel.dragging .carousel__card {
-    cursor: grab;
-    user-select: none;
-}
-
 .carousel__card {
-    scroll-snap-align: start;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     width: 350px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 20px 15px;
-    /* background-color: #FAC213; */
+    margin: 0 auto;
 }
 
-.carousel__header {
-    font-size: 21px;
-    margin-bottom: 15px;
-}
 
-.carousel__description {
-    padding: 0 30px;
-}
-
-.carousel__img-container {
-    width: 110px;
-    height: 110px;
-    margin-bottom: 15px;
-    border-radius: 50%;
-}
-
-.carousel__img-container img {
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.slider__arrow {
+.carousel__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -318,11 +250,11 @@ header {
     box-shadow: 0 3px 6px var(--shadow-border-arrow-color);
 }
 
-.slider__arrow:first-child {
+.carousel__arrow:first-child {
     left: -6px;
 }
 
-.slider__arrow:last-child {
+.carousel__arrow:last-child {
     right: -6px;
 }
 
