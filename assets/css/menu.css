@@ -54,6 +54,7 @@
     max-width: 1296px;
     padding: 30px 10px 15px 10px;
     margin: 0 auto;
+
 }
 
 .header {
@@ -118,6 +119,28 @@ header {
     height: 50vh;
     position: relative;
     background-color: var(--second-color);
+    overflow: hidden;
+}
+
+.background__img-first,
+.background__img-second,
+.background__img-third,
+.background__img-fourth {
+    position: absolute;
+    width: 200px;
+    filter: opacity(5%);
+}
+
+.background__img-first {
+    top: -50%;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.background__img-third {
+    top: 50%;
+    right: 0%;
+    transform: rotate(45deg);
 }
 
 .nav__logo {
@@ -200,7 +223,7 @@ header {
 
 .her__img {
     width: 170px;
-    filter: opacity(50%);
+    filter: opacity(65%);
     margin-right: 10px;
     transform: rotate(25deg)
 }
@@ -213,6 +236,7 @@ header {
 
 .menu {
     position: relative;
+    overflow: hidden;
 }
 
 .menu__img-first,
@@ -232,16 +256,6 @@ header {
 .menu__img-second {
     bottom: 0;
     right: 0;
-}
-
-.menu__img-third {
-    top: 50%;
-    left: 50%;
-}
-
-.menu__img-fourth {
-    bottom: 50%;
-    right: 50%;
 }
 
 .menu__pizza-container,
@@ -352,4 +366,70 @@ header {
         width: 50%;
         justify-content: space-between;
     }
+}
+
+@media screen and (min-width:1024px) {
+
+    .container {
+        padding: 80px 25px 55px 25px;
+    }
+
+    .toggle__menu {
+        display: none;
+    }
+
+    .nav__logo {
+        width: 110px;
+    }
+
+    .nav__container {
+        padding: 0px 30px;
+        height: auto;
+    }
+
+    .nav__links {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .nav__link {
+        color: var(--third-color);
+        font-weight: var(--font-medium);
+        height: 80px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav__link:hover {
+        color: var(--button-color);
+    }
+
+    .nav__link-item {
+        padding: 0;
+        height: auto;
+        width: auto;
+        border-bottom: none;
+    }
+
+    .nav__socials-container {
+        display: block;
+
+    }
+
+    .nav__socials-container a {
+        margin-right: 20px;
+        color: var(--third-color);
+    }
+
+    .nav__socials-container a:last-child {
+        margin-right: 0px;
+    }
+
 }
