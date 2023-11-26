@@ -118,7 +118,7 @@ header {
     height: 50vh;
     position: relative;
     background-color: var(--second-color);
-    overflow: hidden;
+    /* overflow-x: hidden; */
 }
 
 .nav__logo {
@@ -150,6 +150,7 @@ header {
     height: 50vh;
     background-color: var(--navbar-mobile-background-color);
     padding: 10px 30px;
+    z-index: 999;
 }
 
 .nav__links.active {
@@ -165,7 +166,7 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-
+    z-index: 999;
 }
 
 .nav__link-item {
@@ -205,6 +206,7 @@ header {
     position: absolute;
     width: 200px;
     filter: opacity(5%);
+    overflow: hidden;
 }
 
 .background__img-first {
@@ -215,7 +217,7 @@ header {
 
 .background__img-third {
     top: 50%;
-    right: 0%;
+    right: 10%;
     transform: rotate(45deg);
 }
 

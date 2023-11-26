@@ -118,7 +118,6 @@ header {
     height: 50vh;
     position: relative;
     background-color: var(--second-color);
-    overflow: hidden;
 }
 
 .nav__logo {
@@ -216,7 +215,7 @@ header {
 
 .background__img-third {
     top: 50%;
-    right: 0%;
+    right: 10%;
     transform: rotate(45deg);
 }
 
@@ -306,11 +305,11 @@ header {
 }
 
 .arrow:first-child {
-    left: -11px;
+    left: -5px;
 }
 
 .arrow:last-child {
-    right: -11px;
+    right: -5px;
 }
 
 .footer__cointainer {

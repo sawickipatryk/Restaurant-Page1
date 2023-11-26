@@ -119,7 +119,6 @@ header {
     height: 50vh;
     position: relative;
     background-color: var(--second-color);
-    overflow: hidden;
 }
 
 .background__img-first,
@@ -139,7 +138,7 @@ header {
 
 .background__img-third {
     top: 50%;
-    right: 0%;
+    right: 10%;
     transform: rotate(45deg);
 }
 
