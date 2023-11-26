@@ -349,6 +349,14 @@ header {
     margin-bottom: 10px
 }
 
+@media screen and (min-width:400px) {
+    .hero {
+        justify-content: center;
+    }
+
+
+}
+
 @media screen and (min-width:600px) {
     .hero {
         justify-content: center;
