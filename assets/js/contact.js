@@ -1,12 +1,14 @@
-const navBar = document.querySelector('.nav__links')
-const toggle = document.querySelector('.toggle__menu')
+const app = (function () {
+    const navBar = document.querySelector('.nav__links')
+    const toggle = document.querySelector('.toggle__menu')
 
-toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', () => {
 
-    if (!navBar.classList.contains('active')) {
-        navBar.classList.add('active')
-        return
-    }
-    navBar.classList.remove('active')
-})
+        if (!navBar.classList.contains('active')) {
+            navBar.classList.add('active')
+            return
+        }
+        navBar.classList.remove('active')
+    })
+})()
 
