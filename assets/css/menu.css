@@ -243,10 +243,17 @@ header {
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    max-width: 768px;
 }
 
 .menu__btn-drink {
     cursor: pointer;
+    padding: 10px 60px;
+    background-color: black;
+}
+
+.menu__btn-drink.active {
+    background-color: var(--button-color)
 }
 
 .menu__img-first,

@@ -15,8 +15,15 @@ const app = (function () {
     const items = document.querySelectorAll('.menu__pizza-container')
     const itemsContainer = document.querySelector('.menu__container')
 
+
     btns.forEach(btn => {
+
         btn.addEventListener('click', (e) => {
+
+            btns.forEach(btn => btn.classList.remove('active'))
+
+            btn.classList.add('active')
+
             const id = e.target.dataset.options.toLowerCase()
             let choices = [...items]
             if (id === 'all') {
@@ -29,6 +36,7 @@ const app = (function () {
                 itemsContainer.innerHTML = ''
                 choices.forEach(choice => itemsContainer.appendChild(choice))
             }
+
         })
     })
 })()
