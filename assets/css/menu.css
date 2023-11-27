@@ -238,6 +238,17 @@ header {
     overflow: hidden;
 }
 
+.menu__btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.menu__btn-drink {
+    cursor: pointer;
+}
+
 .menu__img-first,
 .menu__img-second,
 .menu__img-third,
@@ -248,7 +259,7 @@ header {
 }
 
 .menu__img-first {
-    top: 0;
+    top: 150px;
     left: 0;
 }
 
@@ -257,26 +268,39 @@ header {
     right: 0;
 }
 
-.menu__pizza-container,
-.menu__drinks-container {
+.menu__img-third {
+    display: none;
+}
+
+.menu__img-fourth {
+    display: none;
+}
+
+.menu__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__pizza-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-bottom: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
-.menu__pizza-top-contaier,
-.menu__drinks-top-contaier {
+.menu__pizza-top-contaier {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.menu__pizza-price,
-.menu__drinks-price {
+.menu__pizza-price {
     font-size: 20px;
     font-weight: var(--font-bold);
 }
@@ -329,6 +353,16 @@ header {
     }
 }
 
+@media screen and (min-width:600px) {
+    .menu__container .menu__pizza-container:nth-child(odd) {
+        margin-right: 20px;
+    }
+
+    .menu__pizza-container {
+        width: 45%;
+    }
+}
+
 @media screen and (min-width:860px) {
     :root {
         --header-font-size: calc(30px * 1.4);
@@ -344,16 +378,7 @@ header {
         height: calc(40vh - 80px);
     }
 
-    .menu__container {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .menu__pizza-container-left {
-        margin-right: 25px;
-    }
 
     footer {
         width: 100%;
@@ -376,7 +401,7 @@ header {
 @media screen and (min-width:1024px) {
 
     .container {
-        padding: 80px 25px 55px 25px;
+        padding: 50px 25px 25px 25px;
     }
 
     .toggle__menu {

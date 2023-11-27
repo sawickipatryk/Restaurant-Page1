@@ -10,5 +10,26 @@ const app = (function () {
         }
         navBar.classList.remove('active')
     })
+
+    const btns = document.querySelectorAll('.menu__btn-drink')
+    const items = document.querySelectorAll('.menu__pizza-container')
+    const itemsContainer = document.querySelector('.menu__container')
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const id = e.target.dataset.options.toLowerCase()
+            let choices = [...items]
+            if (id === 'all') {
+                itemsContainer.innerHTML = ''
+                choices.forEach(choice => itemsContainer.appendChild(choice))
+            } else {
+                let choices = [...items];
+                itemsContainer.innerHTML = ''
+                choices = choices.filter(choice => choice.getAttribute('data-options').toLowerCase().includes(id))
+                itemsContainer.innerHTML = ''
+                choices.forEach(choice => itemsContainer.appendChild(choice))
+            }
+        })
+    })
 })()
 

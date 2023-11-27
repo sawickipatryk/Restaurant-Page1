@@ -69,5 +69,4 @@ const app = (function () {
     carousel.addEventListener('mousemove', dragging)
     document.addEventListener('mouseup', stopDrag)
     carousel.addEventListener('scroll', infiniteScroll)
-
 })()
